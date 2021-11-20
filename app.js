@@ -1,8 +1,4 @@
-const express = require('express')
-const app = express()
+const ServidorModelo = require("./models/ServidorModelo.js");
 
-app.get('/', function (req, res) {
-    res.send('Hello World')
-})
-
-app.listen(3000, function (){console.log("Servidor encendido")})
+let servidor = new ServidorModelo();
+servidor.despertarServidor();
